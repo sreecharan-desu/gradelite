@@ -130,8 +130,8 @@ const subjectsData = {
         hide: [9]
       },
       'MECH': {
-        names: ["Heat Transfer", "Design of Transmission Elements", "Applied Thermodynamics", "Metrology and Mechanical Measurements", "Metrology and Mechanical Measurements Lab", "Heat Transfer Lab", "Applied Thermodynamics Lab", "English Language Communication Skills Lab-II", ""],
-        credits: [4, 4, 4, 3, 1.5, 1.5, 1.5, 1.5, 0, 0],
+        names: ["Heat Transfer", "Robotics & Automation", "Applied Thermodynamics", "Metrology and Mechanical Measurements", "Metrology and Mechanical Measurements Lab", "Heat Transfer Lab", "Applied Thermodynamics Lab", "English Language Communication Skills Lab-II", ""],
+        credits: [4, 3, 4, 3, 1.5, 1.5, 1.5, 1.5, 0, 0],
         hide: [9]
       }
     },
