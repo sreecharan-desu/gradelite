@@ -222,9 +222,12 @@ const subjectsData = {
 };
 
 
-if (window.location.href != "https://gradelite.sreecharandesu.in/") {
+// Only redirect if on a non-canonical production domain (e.g., github pages)
+// and not on localhost
+if (window.location.hostname === "sreecharan-desu.github.io") {
     window.location.replace("https://gradelite.sreecharandesu.in");
 }
+
 window.scrollTo(0, 0);
 
 function generateEffect() {
