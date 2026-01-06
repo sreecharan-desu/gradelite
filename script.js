@@ -111,7 +111,7 @@ const subjectsData = {
   'E3': {
     'Sem - 1': {
       'CSE': {
-        names: ["Operating System", "Computer Networks", "Software Engineering", "Mathematical Foundations for Data Science", "Elective I", "Operating System Lab", "Computer Networks Lab", "Software Engineering Lab", "English-Language communication Skills Lab- II"],
+        names: ["Operating System", "Computer Networks", "Software Engineering", "Cloud Computing / Other Choosen", "Artificial Intelligence & Search methods", "Operating System Lab", "Computer Networks Lab", "Software Engineering Lab", "English-Language communication Skills Lab- II"],
         credits: [3, 3, 3, 3, 3, 1.5, 1.5, 1.5, 1.5, 0]
       },
       'ECE': {
