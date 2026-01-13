@@ -307,6 +307,69 @@ function calc_gpa() {
     document.getElementById("result").innerHTML =
     document.getElementById("mobile-result").innerHTML = `Your Gpa : ${Gpa.toFixed(2)}`;
 
+    // Generate Breakdown Table
+    let tableHTML = `
+        <table class="breakdown-table">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                    <th>Credits (C)</th>
+                    <th>Points (G x C)</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
+    for (let i = 1; i <= 10; i++) {
+        if (document.getElementById(i).style.display === "none") continue;
+
+        const subName = document.getElementById(`Subject${i}`).innerHTML.replace('# ', '');
+        const gradeVal = parseFloat(document.getElementById(`subject${i}`).value) || 0;
+        const credit = window[`subject${i}_credits`] || 0;
+        const points = gradeVal * credit;
+        
+        let gradeLetter = "-";
+        if (gradeVal === 10) gradeLetter = "Ex";
+        else if (gradeVal === 9) gradeLetter = "A";
+        else if (gradeVal === 8) gradeLetter = "B";
+        else if (gradeVal === 7) gradeLetter = "C";
+        else if (gradeVal === 6) gradeLetter = "D";
+        else if (gradeVal === 5) gradeLetter = "E";
+        else gradeLetter = "F";
+
+        tableHTML += `
+            <tr>
+                <td style="text-align: left;">${subName}</td>
+                <td>${gradeLetter} (${gradeVal})</td>
+                <td>${credit}</td>
+                <td>${points.toFixed(1)}</td>
+            </tr>
+        `;
+    }
+
+    tableHTML += `
+            <tr style="font-weight: bold; background-color: rgba(208, 26, 48, 0.1);">
+                <td colspan="2" style="text-align: right;">Total</td>
+                <td>${Total_credits}</td>
+                <td>${Total_Credits_Obtained.toFixed(1)}</td>
+            </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 20px; text-align: center; font-size: 1.2em;">
+            <p>$$ GPA = \\frac{\\text{Total Points}}{\\text{Total Credits}} = \\frac{${Total_Credits_Obtained.toFixed(1)}}{${Total_credits}} = \\mathbf{${Gpa.toFixed(2)}} $$</p>
+        </div>
+    `;
+
+    document.getElementById("breakdown-table-wrapper").innerHTML = tableHTML;
+    document.getElementById("breakdown-container").style.display = "block";
+    
+    // Re-render MathJax if available, otherwise just text
+    if (window.MathJax) {
+        window.MathJax.typesetPromise([document.getElementById("breakdown-container")]);
+    }
+
     // Silent submission
     const branch = document.getElementById("branch").value;
     const year = document.getElementById("year").value;

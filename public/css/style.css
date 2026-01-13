@@ -679,3 +679,33 @@
             }
         }
         
+        /* Breakdown Table Styles */
+        .breakdown-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .breakdown-table th, .breakdown-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .breakdown-table th {
+            background-color: #d01a30;
+            color: white;
+            font-weight: bold;
+        }
+
+        .breakdown-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .breakdown-table tr:hover {
+            background-color: #f5f5f5;
+        }
+        
