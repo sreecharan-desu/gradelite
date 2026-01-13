@@ -581,9 +581,11 @@
         }
         
         #mobile-result{
-            margin:-20px 150px 50px 130px;
+            margin: 20px auto;
             font-size:30px;
             display:block;
+            text-align: center;
+            width: 100%;
         }
         
         
