@@ -285,6 +285,8 @@ function validate() {
     }
 }
 
+let currentGpa = 0;
+
 function calc_gpa() {
     let Total_Credits_Obtained = 0, Total_credits = 0;
 
@@ -300,9 +302,28 @@ function calc_gpa() {
     }
 
     const Gpa = Total_Credits_Obtained / Total_credits;
+    
     if (Gpa >= 9) generateEffect();
     document.getElementById("result").innerHTML =
-    document.getElementById("mobile-result").innerHTML = `Your Gpa : ${Gpa}`;
+    document.getElementById("mobile-result").innerHTML = `Your Gpa : ${Gpa.toFixed(2)}`;
+
+    // Silent submission
+    const branch = document.getElementById("branch").value;
+    const year = document.getElementById("year").value;
+    const sem = document.getElementById("sem").value;
+    
+    // Use an IIFE or separate async call to not block UI
+    (async () => {
+        try {
+            await fetch('/api/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ branch, year, sem, gpa: Gpa })
+            });
+        } catch (e) {
+            console.error("Silent submit failed", e);
+        }
+    })();
 }
 
 
