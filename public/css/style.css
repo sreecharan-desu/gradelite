@@ -61,7 +61,7 @@
         .logo{
             width:55px;
             height:55px;
-            background-image:url('gradient_star_award_ribbon.jpg');
+            background-image:url('../gradient_star_award_ribbon.jpg');
             background-size:cover;
             border-radius:50%;
             margin:10px;
@@ -70,9 +70,10 @@
         
         
         .select-criteria form{
-            margin-left:200px;
-            text-align:left;
-            padding:10px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+            padding: 20px;
         }
         
         
@@ -90,12 +91,15 @@
         
         form{
             text-align: center;
-            margin:10px 500px;
-            font-size:20px;
+            margin: 20px auto;
+            font-size: 20px;
+            width: 100%;
         }
         
         form table{
-            width:500px;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
         }
         form table td{
             padding:10px;
@@ -124,19 +128,19 @@
         }
         
         select{
-            width: 300px;
-            height: 24px;
+            width: 100%;
+            max-width: 300px;
+            height: 35px;
             border: none;
             background-color: whitesmoke;
             transition: 0.1s ease-in-out;
             -webkit-transition: 0.1s;
             outline: none;
-            padding: 1px;
+            padding: 5px 10px;
             text-align: center;
-            padding:0px 10px;
-            transition:0.3s ease;
+            transition: 0.3s ease;
+            border-radius: 5px;
         }
-        
         
         select:focus{
             border: 3px solid #d01a30;
@@ -145,20 +149,18 @@
         
         
         input[type=button]{
-            width:300px;
-            height:auto;
-            border:none;
-            background-color:whitesmoke;
-            transition: 0.1s ease-in-out;
-            -webkit-transition:0.1s;
-            outline:none;
-            padding:10px;
+            width: 100%;
+            max-width: 300px;
+            height: 40px;
+            border: none;
+            background-color: whitesmoke;
+            transition: 0.4s ease-in-out;
+            outline: none;
             text-align: center;
-            padding:2px;
-            transition:0.4s ease-in-out;
-            padding:2px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
         }
-        
         
         input[type=button]:hover{
             background-color:#d01a30;
@@ -166,28 +168,28 @@
             border:2px solid white;
         }
         
-        
         input[type=button]:focus{
             border: 3px solid #d01a30;
         }
         
         #h2{
-            padding:20px 0px 0px 100px;
-            color:#d01a30;
-            font-weight:900;
-            display:none;
-            font-size:40px;
-            opacity:0;
+            padding: 20px;
+            color: #d01a30;
+            font-weight: 900;
+            display: none;
+            font-size: clamp(24px, 5vw, 40px);
+            opacity: 0;
+            text-align: center;
         }
         
         .subjects{
-            margin:50px 100px 10px 200px;
-            height:auto;
-            width:10vw;
-            display:flex;
-            flex-direction:row;
-            justify-content:space-between;
-            opacity:0;
+            margin: 20px auto;
+            width: 95%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
         }
         
         
@@ -202,24 +204,17 @@
         }
         
         .subjects select{
-            width: 200px;
-            height: 24px;
-            border: none;
-            background-color: whitesmoke;
-            transition: 0.1s ease-in-out;
-            -webkit-transition: 0.1s;
-            outline: none;
-            padding: 1px;
-            text-align: center;
-            padding:2px;
+            width: 100%;
+            max-width: 150px;
+            height: 30px;
         }
         
-        
         #result{
-            width:300px;
-            margin:100px 100px 100px 500px;
-            font-size:50px;
-            color:#d01a30;
+            width: auto;
+            margin: 20px auto;
+            text-align: center;
+            font-size: clamp(30px, 8vw, 60px);
+            color: #d01a30;
         }
         
         #mobile-result{
@@ -284,353 +279,38 @@
           }
 
         @media (max-width:900px){
-        
-            /* Google Fonts */
-         
-        #birthdayButton {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #ff9f1c;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            z-index: 10;
-        }
-        
-        #confetti-container {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        
-        .confetti, .ribbon {
-            position: absolute;
-            animation: riseAndFall 5s linear;
-            opacity: 0.7;
-        }
-        
-        .ribbon {
-            border-radius: 50%;
-        }
-        
-        @keyframes riseAndFall {
-            0% {
-                transform: translateY(100vh) translateX(0) rotate(0deg);
-                opacity: 1;
+            .select-criteria form {
+                margin: 10px;
+                padding: 10px;
             }
-            50% {
-                transform: translateY(-50vh) translateX(0) rotate(360deg);
-                opacity: 1;
+
+            form table {
+                width: 100%;
             }
-            100% {
-                transform: translateY(0) translateX(0) rotate(720deg);
-                opacity: 0;
+
+            .subjects td p {
+                width: 100%;
+                font-size: 16px;
             }
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@600&display=swap');
-        
-        body {
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-          }
-          
-          /* Add an overlay div to capture touch and swipe events */
-          .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none; /* Allow events to pass through */
-          }
-          
-          /* Apply a horizontal scroll effect when the user swipes right */
-          .overlay::before {
-            content: "";
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, transparent 0%, transparent 20%, rgba(255, 255, 255, 0.8) 100%); /* Adjust the gradient to your liking */
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: auto; /* Capture events on this overlay */
-          }
-          
-          /* Disable scrolling when the user swipes right */
-          body.no-scroll {
-            overflow-x: hidden !important;
-          }
-          
-        
-        
-        *{
-            /* Universal */
-            font-family: 'Cabin Condensed', sans-serif;
-            /* Applies to entire webpage*/
-        }
-        
-        body{
-            background-color:rgba(208, 26, 48,0.2);
-            border-radius:10px;
-        }
-        
-        /* Navbar */
-        
-        .navbar{
-            color:white;
-            background-color:#d01a30;
-            height:auto;
-            width:100%;
-            display:flex;
-            flex-direction:row;
-            justify-content:space-between;
-            align-items: center;
-            padding: 10px 15px;
-        }
-        
-        .navbar h1{
-            font-size:30px;
-        }
-        
-        .navbar h1::first-letter{
-            font-size:40px;
-        }
-        
-        .logo{
-            width:55px;
-            height:55px;
-            background-image:url('gradient_star_award_ribbon.jpg');
-            background-size:cover;
-            border-radius:50%;
-        }
-        
-        
-        .logo{
-            border-radius:50%;
-        }
-        .navbar{
-            height:100%;
-            color:white;
-        }
-        .navbar h1{
-            color:white;
-            font-size:30px;
-        }
-        
-        .selection{
-            width:auto;
-            height:auto;
-            border-radius:10px;
-        }
-        
-        .selection h1{
-            margin:10px;
-            color:#d01a30;
-        }
-        
-        .select-criteria form{
-            margin-left:10px;
-            text-align:left;
-            padding:1px;
-        }
-        
-        form{
-            text-align: center;
-            font-size:18px;
-        }
-        
-        form table{
-            width:410px;
-        }
-        form table td{
-            padding:5px;
-        }
-        
-        .select-criteria input[type=text]{
-            width:200px;
-            height:24px;
-            border:none;
-            background-color:whitesmoke;
-            transition: 0.1s ease-in-out;
-            -webkit-transition:0.1s;
-            outline:none;
-            padding:10px;
-            text-align: center;
-            padding:2px;
-        }
-        
-        ::-webkit-input-placeholder{
-            font-size:18px;
-            color: #d01a30;
-        }
-        
-        input[type=text]:focus{
-            border: 3px solid #d01a30;
-        }
-        
-        select{
-            width:200px;
-            height:24px;
-            border: none;
-            background-color: whitesmoke;
-            transition: 0.1s ease-in-out;
-            -webkit-transition: 0.1s;
-            outline: none;
-            padding: 1px;
-            text-align: center;
-            padding:2px;
-            transition:0.4s ease-in-out;
-        }
-        
-        
-        select:focus{
-            border: 3px solid #d01a30;
-        }
-        
-        input[type=button]{
-            width:200px;
-            height:auto;
-            border:none;
-            background-color:#d01a30;
-            transition: 0.1s ease-in-out;
-            -webkit-transition:0.1s;
-            outline:none;
-            padding:10px;
-            text-align: center;
-            padding:2px;
-            transition:0.4s ease-in-out;
-            padding:2px;
-            color:white;
-            margin:30px;
-        }
-        
-        
-        input[type=button]:hover{
-            background-color:#d01a30;
-            color:white;
-            border:2px solid white;
-        }
-        
-        
-        input[type=button]:focus{
-            border: 3px solid #d01a30;
-        }
-        
-        #h2{
-            padding:20px 0px 0px 10px;
-            color:#d01a30;
-            font-weight:900;
-            font-style:oblique;
-            display:none;
-            opacity:0;
-        }
-        
-        .subjects{
-            width:400px;
-            height:auto;
-            margin:50px 100px 10px 10px;
-            height:auto;
-            opacity:0;
-        }
-        
-        #subjects{
-            display:none;
-        }
-        
-        .subjects table{
-            width:320px;
-        }
-        
-        
-        .subjects td p{
-            width:220px;
-            padding:5px;
-            font-size:18px;
-        }
-        
-        #calc{
-            margin-left:10px;
-            height:40px;
-        }
-        
-        .subjects select{
-            width:150px;
-            height: 24px;
-            border: none;
-            background-color: whitesmoke;
-            transition: 0.1s ease-in-out;
-            -webkit-transition: 0.1s;
-            outline: none;
-            padding: 1px;
-            margin-left:10px;
-            text-align: center;
-            padding:2px;
-        }
-        
-        
-        #result{
-            width:300px;
-            margin:100px 100px 100px 500px;
-            font-size:50px;
-            color:#d01a30;
-            display:none;
-        }
-        
-        #mobile-result{
-            margin:-20px 150px 50px 130px;
-            font-size:30px;
-            display:block;
-        }
-        
-        
-        
-        .navbar a{
-            text-decoration:none;
-            color:white;
-        }
-        
-        footer{
-            background-color:#d01a30;
-            letter-spacing:2px;
-        }
-        
 
-        .social-icon {
-            font-size: 2rem;
-            margin: 0 10px;
-            color:white;
-            text-decoration:none;
-            transition: color 0.3s ease;
+            .subjects table {
+                width: 100%;
+            }
 
-          }
+            .subjects select {
+                max-width: 100px;
+            }
 
-        .social-icon i{
-            width:12px;
-            height:12px;
-        }
-      
-          .social-icon:hover {
-              color:white;
-              text-decoration:none;
-          }
-  
-          footer{
-            letter-spacing:2px;
-            position:relative;
-          }
-  
-          .child{
-              display:flex;
-              flex-direction:column;
-              align-items:center;
-              justify-content:center;
-              gap: 15px;
-          }
-        
+            #mobile-result {
+                margin: 20px auto;
+                font-size: 24px;
+                display: block;
+                text-align: center;
+            }
+
+            #result {
+                display: none;
+            }
         }
         
         #birthdayButton {
