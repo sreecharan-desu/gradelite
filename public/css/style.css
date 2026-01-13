@@ -185,43 +185,70 @@
             text-align: center;
         }
         
-        .subjects{
-            margin: 20px auto;
-            width: 95%;
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        /* Main Layout Containers */
+        .main-container {
+            width: 100%;
+            padding: 20px 5%;
+        }
+
+        .subjects-section {
+            width: 100%;
+            margin-top: 30px;
             opacity: 0;
         }
-        
-        
-        .subjects td p{
-            width:350px;
-            padding:10px;
+
+        .subjects-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 50px;
+            flex-wrap: wrap;
         }
-        
-        #calc{
-            margin-left:150px;
-            height:30px;
-        }
-        
-        .subjects select{
+
+        .subjects {
             width: 100%;
-            max-width: 150px;
-            height: 30px;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
         }
-        
-        #result{
-            width: auto;
-            margin: 20px auto;
-            text-align: center;
-            font-size: clamp(30px, 8vw, 60px);
+
+        .subjects table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+
+        .subjects td p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .result-display {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 12px;
+            border: 2px dashed #d01a30;
+        }
+
+        #result {
+            font-size: clamp(40px, 10vw, 80px);
             color: #d01a30;
+            font-weight: 900;
+            text-align: center;
+            margin: 0;
         }
-        
-        #mobile-result{
-            display:none;
+
+        #mobile-result {
+            display: none;
         }
         
         
@@ -284,36 +311,32 @@
 
         @media (max-width:900px){
             .select-criteria form {
-                margin: 10px;
+                margin: 10px auto;
+                padding: 15px;
+            }
+
+            .main-container {
                 padding: 10px;
             }
 
-            form table {
+            .subjects-wrapper {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .subjects {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .result-display {
                 width: 100%;
-            }
-
-            .subjects td p {
-                width: 100%;
-                font-size: 16px;
-            }
-
-            .subjects table {
-                width: 100%;
-            }
-
-            .subjects select {
-                max-width: 100px;
-            }
-
-            #mobile-result {
-                margin: 20px auto;
-                font-size: 24px;
-                display: block;
-                text-align: center;
+                padding: 20px;
             }
 
             #result {
-                display: none;
+                font-size: 50px;
             }
         }
         
