@@ -243,15 +243,9 @@ const subjects = [];
 for (let i = 1; i <= 10; i++) subjects.push(document.getElementById(`Subject${i}`));
 
 function validate() {
-    const subjectsSection = document.getElementById("subjects-section");
-    const h2 = document.getElementById("h2");
-    
-    subjectsSection.style.display = h2.style.display = "block";
-    
-    setTimeout(() => {
-        subjectsSection.style.opacity = h2.style.opacity = 1;
-        subjectsSection.style.transition = h2.style.transition = "0.6s ease-out";
-    }, 10);
+    document.getElementById("h2").style.display = document.getElementById("subjects").style.display = "block";
+    document.getElementById("h2").style.opacity = document.getElementById("subjects").style.opacity = 1;
+    document.getElementById("h2").style.transition = document.getElementById("subjects").style.transition = "0.4s ease-in-out";
 
     // Reset: hide all subject rows initially
     for (let i = 1; i <= 10; i++) {
@@ -285,8 +279,8 @@ function validate() {
         if (data.show) data.show.forEach(i => document.getElementById(i).style.display = "");
     } else {
         alert("Please Enter a Valid Input");
-        document.getElementById("h2").style.display = subjectsSection.style.display = "none";
-        document.getElementById("h2").style.opacity = subjectsSection.style.opacity = 0;
+        document.getElementById("h2").style.display = document.getElementById("subjects").style.display = "none";
+        document.getElementById("h2").style.opacity = document.getElementById("subjects").style.opacity = 0;
         location.href = "index.html";
     }
 }
@@ -310,7 +304,8 @@ function calc_gpa() {
     const Gpa = Total_Credits_Obtained / Total_credits;
     
     if (Gpa >= 9) generateEffect();
-    document.getElementById("result").innerHTML = `Your Gpa : ${Gpa.toFixed(2)}`;
+    document.getElementById("result").innerHTML =
+    document.getElementById("mobile-result").innerHTML = `Your Gpa : ${Gpa.toFixed(2)}`;
 
     // Generate Breakdown Table
     let tableHTML = `

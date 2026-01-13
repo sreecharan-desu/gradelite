@@ -139,14 +139,18 @@
     <h2 id="h2"> #CSE / E1 /SEM - 1 </h2>
     <div id="confetti-container"></div>
 
-    <!-- Main Content Container -->
-    <div class="main-container">
-        <div id="subjects-section" class="subjects-section" style="display: none;">
-            <div class="subjects-wrapper">
-                <div id="subjects" class="subjects">
+    <!-- Grades Choosig Table -->
+    <table>
+        <tr>
+            <td>
+                <div class="subjects" id="subjects">
                     <table>
                         <tr id="1">
-                            <td><label for="subject1"><p id="Subject1"> </p></label></td>
+                            <td>
+                                <label for="subject1">
+                                    <p id="Subject1"> </p>
+                                </label>
+                            </td>
                             <td>
                                 <select id="subject1">
                                     <option value="10">Ex</option>
@@ -159,7 +163,11 @@
                             </td>
                         </tr>
                         <tr id="2">
-                            <td><label for="subject2"><p id="Subject2"> </p></label></td>
+                            <td>
+                                <label for="subject2">
+                                    <p id="Subject2"> </p>
+                                </label>
+                            </td>
                             <td>
                                 <select id="subject2">
                                     <option value="10">Ex</option>
@@ -172,7 +180,11 @@
                             </td>
                         </tr>
                         <tr id="3">
-                            <td><label for="subject3"><p id="Subject3"> </p></label></td>
+                            <td>
+                                <label for="subject3">
+                                    <p id="Subject3"> </p>
+                                </label>
+                            </td>
                             <td>
                                 <select id="subject3">
                                     <option value="10">Ex</option>
@@ -185,7 +197,11 @@
                             </td>
                         </tr>
                         <tr id="4">
-                            <td><label for="subject4"><p id="Subject4"> </p></label></td>
+                            <td>
+                                <label for="subject4">
+                                    <p id="Subject4"> </p>
+                                </label>
+                            </td>
                             <td>
                                 <select id="subject4">
                                     <option value="10">Ex</option>
@@ -198,7 +214,11 @@
                             </td>
                         </tr>
                         <tr id="5">
-                            <td><label for="subject5"><p id="Subject5"> </p></label></td>
+                            <td>
+                                <label for="subject5">
+                                    <p id="Subject5"> </p>
+                                </label>
+                            </td>
                             <td>
                                 <select id="subject5">
                                     <option value="10">Ex</option>
@@ -211,7 +231,11 @@
                             </td>
                         </tr>
                         <tr id="6">
-                            <td><label for="subject6"><p id="Subject6"> </p></label></td>
+                            <td>
+                                <label for="subject6">
+                                    <p id="Subject6"> </p>
+                                </label>
+                            </td>
                             <td>
                                 <select id="subject6">
                                     <option value="10">Ex</option>
@@ -224,7 +248,11 @@
                             </td>
                         </tr>
                         <tr id="7">
-                            <td><label for="subject7"><p id="Subject7"> </p></label></td>
+                            <td>
+                                <label for="subject7">
+                                    <p id="Subject7"> </p>
+                                </label>
+                            </td>
                             <td>
                                 <select id="subject7">
                                     <option value="10">Ex</option>
@@ -237,7 +265,11 @@
                             </td>
                         </tr>
                         <tr id="8">
-                            <td><label for="subject8"><p id="Subject8"> </p></label></td>
+                            <td>
+                                <label for="subject8">
+                                    <p id="Subject8"> </p>
+                                </label>
+                            </td>
                             <td>
                                 <select id="subject8">
                                     <option value="10">Ex</option>
@@ -250,7 +282,11 @@
                             </td>
                         </tr>
                         <tr id="9">
-                            <td><label for="subject9"><p id="Subject9"> </p></label></td>
+                            <td>
+                                <label for="subject9">
+                                    <p id="Subject9"> </p>
+                                </label>
+                            </td>
                             <td>
                                 <select id="subject9">
                                     <option value="10">Ex</option>
@@ -263,7 +299,11 @@
                             </td>
                         </tr>
                         <tr id="10">
-                            <td><label for="subject10"><p id="Subject10"> </p></label></td>
+                            <td>
+                                <label for="subject10">
+                                    <p id="Subject10"> </p>
+                                </label>
+                            </td>
                             <td>
                                 <select id="subject10">
                                     <option value="10">Ex</option>
@@ -276,19 +316,22 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="text-align: center; padding-top: 20px;">
-                                <input type="button" id="calc" value="Calculate" onclick="calc_gpa()" style="margin: 0;">
+                            <td colspan="2">
+                                <input type="button" id="calc" value="Calculate" onclick="calc_gpa()">
                             </td>
                         </tr>
                     </table>
                 </div>
-
-                <div class="result-display">
-                    <p id="result"></p>
-                </div>
-            </div>
-        </div>
-    </div>
+            </td>
+            <td>
+                <p id="result"></p>
+            </td>
+        </tr>
+        <tr>
+                <p id="mobile-result"> </p>
+            </td>
+        </tr>
+    </table>
 
     <!-- Calculation Breakdown -->
     <div id="breakdown-container" style="display: none; margin: 20px auto; max-width: 800px; padding: 20px; color: #d01a30;">
