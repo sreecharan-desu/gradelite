@@ -61,7 +61,7 @@
         .logo{
             width:55px;
             height:55px;
-            background-image:url('gradient_star_award_ribbon.jpg');
+            background-image:url('../gradient_star_award_ribbon.jpg');
             background-size:cover;
             border-radius:50%;
             margin:10px;
