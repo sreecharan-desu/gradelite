@@ -189,3 +189,7 @@ This function generates a confetti effect using the `confetti` library. It sets 
 -   **Data Sanitization:** Sanitize user input before displaying it on the page to prevent XSS attacks.
 -   **Secure Data Storage:** If storing sensitive data (e.g., student grades) on the client-side, use appropriate encryption techniques to protect the data. However, storing sensitive data client-side is generally discouraged.
 -   **HTTPS:** Ensure that the application is served over HTTPS to protect data in transit.
+
+
+## Consistency & Discipline
+This project is maintained regularly to ensure documentation clarity and code quality. Small, daily improvements are prioritized over large, infrequent updates.
