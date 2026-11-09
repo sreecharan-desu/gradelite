@@ -24,3 +24,7 @@ npm start            # http://localhost:3000
 ## env
 
 copy `.env.example` to `.env` and set `MONGODB_URI`.
+
+
+## Consistency & Discipline
+This project is maintained regularly to ensure documentation clarity and code quality. Small, daily improvements are prioritized over large, infrequent updates.
